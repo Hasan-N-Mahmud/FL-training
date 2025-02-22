@@ -10,8 +10,8 @@ license = "Apache-2.0"
 dependencies = [
     "flwr[simulation]>=1.15.2",
     "flwr-datasets[vision]>=0.5.0",
-    "torch==2.6.0",
-    "torchvision==0.21.0",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
     "pandas>=2.2.3",
     "matplotlib>=3.10.0",
     "torchinfo>=1.8.0"
@@ -28,9 +28,9 @@ serverapp = "fl.server_app:app"
 clientapp = "fl.client_app:app"
 
 [tool.flwr.app.config]
-num-server-rounds = 3
+num-server-rounds = 6
 fraction-fit = 0.5
-local-epochs = 1
+local-epochs = 5
 
 [tool.flwr.federations]
 default = "local-simulation"
