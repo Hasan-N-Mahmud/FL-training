@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "fl-training"
+name = "fl"
 version = "1.0.0"
 description = ""
 license = "Apache-2.0"
@@ -24,8 +24,8 @@ packages = ["."]
 publisher = "ornob"
 
 [tool.flwr.app.components]
-serverapp = "fl_training.server_app:app"
-clientapp = "fl_training.client_app:app"
+serverapp = "fl.server_app:app"
+clientapp = "fl.client_app:app"
 
 [tool.flwr.app.config]
 num-server-rounds = 3
